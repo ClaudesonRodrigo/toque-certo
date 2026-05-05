@@ -11,7 +11,7 @@ from supabase import create_client, Client
 load_dotenv()
 supabase: Client = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_SECRET_KEY"))
 
-API_TOKEN = os.getenv("FOOTBALL_DATA_API_KEY") or os.getenv("API_FOOTBALL_KEY")
+API_TOKEN = os.getenv("API_TOKEN") or os.getenv("FOOTBALL_DATA_API_KEY") or os.getenv("API_FOOTBALL_KEY")
 BASE_URL = "https://api.football-data.org/v4"
 headers = {"X-Auth-Token": API_TOKEN}
 
